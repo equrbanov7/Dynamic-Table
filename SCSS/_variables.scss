@@ -1,0 +1,31 @@
+@import "./functions";
+
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+$table-bg-scale: 80%;
+$table-striped-bg: rgba($secondary, 0.75);
+$table-striped-bg-alt: rgba($secondary, 0.3);
+
+$table-hover-color: #fff;
+$table-hover-bg-factor: 0.2;
+
+$table-hover-bg: rgba(27, 7, 7, 0.8);
+
+$table-active-bg: $primary;
+
+$table-variants: (
+  "primary": shift-color($primary, $table-bg-scale),
+  "secondary": shift-color($secondary, $table-bg-scale),
+  "success": shift-color($success, $table-bg-scale),
+  "info": shift-color($info, $table-bg-scale),
+  "warning": shift-color($warning, $table-bg-scale),
+  "danger": shift-color($danger, $table-bg-scale),
+  "light": $light,
+  "dark": $dark,
+);

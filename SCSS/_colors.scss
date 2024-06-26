@@ -1,0 +1,16 @@
+@each $name, $color in $table-variants {
+  .table-#{$name} {
+    color: if(lightness($color) > 50, black, white);
+    background-color: $color;
+    border-color: $color;
+  }
+
+  .border-#{$name} {
+    thead tr th {
+      border-color: $color;
+    }
+    tbody tr td {
+      border-color: $color;
+    }
+  }
+}

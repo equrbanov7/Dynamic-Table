@@ -1,0 +1,61 @@
+@import "../variables";
+@import "../mixin";
+.table {
+  @include default-table;
+
+  th,
+  td {
+    padding: 0.75rem;
+  }
+}
+.table-striped {
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: $table-striped-bg;
+    }
+    tr:nth-of-type(even) {
+      background-color: $table-striped-bg-alt;
+    }
+  }
+}
+
+.table-striped-columns {
+  th,
+  td {
+    &:nth-child(odd) {
+      background-color: $table-striped-bg !important;
+    }
+    &:nth-child(even) {
+      background-color: $table-striped-bg-alt !important;
+    }
+  }
+}
+
+.table-hover tbody tr:hover {
+  color: $table-hover-color !important;
+  background-color: $table-hover-bg !important;
+}
+
+.table-active {
+  background-color: $table-active-bg !important;
+  color: $light;
+}
+
+.table-borderless {
+  th,
+  td,
+  thead th {
+    border: none;
+  }
+}
+
+.table-bordered {
+  border: 1px solid;
+  th,
+  td {
+    border: 1px solid;
+  }
+  thead th {
+    border-bottom-width: 2px;
+  }
+}
